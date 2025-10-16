@@ -9,8 +9,8 @@ import Summary from "./components/Summary"
 import EditBoardModal from "./components/EditBoardModal"
 import SaveOrderModal from "./components/SaveOrderModal"
 import HistoryView from "./components/HistoryView"
-import type { BoardEntry } from "../../models/BoardFootModels.js"
-import type { SavedOrder } from "../../models/SavedOrderModels.js"
+import type { BoardEntry, LengthUnit } from "../../../models/BoardFootModels"
+import type { SavedOrder } from "../../../models/SavedOrderModels"
 import {
 	Dialog,
 	DialogActions,
@@ -54,7 +54,7 @@ const BoardFootCalculatorView = () => {
 					text: exportText,
 				})
 			} catch (error) {
-				console.log("Share cancelled")
+				console.log("Share cancelled", error)
 			}
 		} else {
 			navigator.clipboard.writeText(exportText)
@@ -106,7 +106,7 @@ const BoardFootCalculatorView = () => {
 						viewModel.setSelectedUnit(unit)
 						// Reset length unit when switching to metric
 						if (unit === "Metric") {
-							viewModel.setLengthUnit("ft" as any)
+							viewModel.setLengthUnit("ft" as LengthUnit)
 						}
 					}}
 				/>
