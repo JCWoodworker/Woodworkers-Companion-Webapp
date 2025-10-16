@@ -2,7 +2,11 @@ const PrivacyPolicy = () => {
 	return (
 		<div
 			className="page-container"
-			style={{ maxWidth: "800px", textAlign: "left" }}
+			style={{
+				maxWidth: "800px",
+				textAlign: "left",
+				color: "var(--dark-brown)",
+			}}
 		>
 			<h1>Privacy Policy for Woodworker's Companion</h1>
 			<p>

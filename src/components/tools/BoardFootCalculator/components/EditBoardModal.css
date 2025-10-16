@@ -1,0 +1,6 @@
+.edit-board-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 10px 0;
+}

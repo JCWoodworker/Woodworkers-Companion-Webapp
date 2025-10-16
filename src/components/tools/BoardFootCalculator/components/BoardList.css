@@ -1,0 +1,77 @@
+.board-list-container {
+	margin-top: 20px;
+}
+
+.board-list-title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: var(--dark-brown);
+	margin-bottom: 12px;
+}
+
+.board-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.board-row {
+	background-color: white;
+	border-radius: 10px;
+	padding: 14px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.board-row:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	transform: translateY(-1px);
+}
+
+.board-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.board-dimensions {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--dark-brown);
+}
+
+.board-details {
+	display: flex;
+	gap: 12px;
+	font-size: 0.9rem;
+	color: var(--wood-primary);
+}
+
+.board-delete-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(255, 0, 0, 0.7);
+	border: none;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	flex-shrink: 0;
+}
+
+.board-delete-btn:hover {
+	background-color: rgba(255, 0, 0, 0.9);
+	transform: scale(1.1);
+}
+
+.board-delete-btn:active {
+	transform: scale(0.95);
+}

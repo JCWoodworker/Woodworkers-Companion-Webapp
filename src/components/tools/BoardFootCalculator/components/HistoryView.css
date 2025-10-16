@@ -1,0 +1,250 @@
+.history-view {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--cream-background);
+	padding-bottom: 40px;
+}
+
+.history-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.back-button,
+.delete-all-button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+	border: 2px solid var(--wood-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: var(--wood-primary);
+	transition: all 0.2s ease;
+}
+
+.back-button:hover,
+.delete-all-button:hover {
+	background-color: var(--wood-primary);
+	color: white;
+	transform: scale(1.05);
+}
+
+.history-title {
+	font-size: 1.8rem;
+	color: var(--dark-brown);
+	margin: 0;
+}
+
+.history-content {
+	padding: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.empty-state {
+	text-align: center;
+	padding: 60px 20px;
+}
+
+.empty-state p {
+	font-size: 1.2rem;
+	color: var(--dark-brown);
+	margin: 10px 0;
+}
+
+.empty-state-subtitle {
+	font-size: 1rem;
+	color: #888;
+}
+
+/* Card View (Mobile) */
+.order-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.order-card {
+	background-color: white;
+	border-radius: 12px;
+	padding: 16px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.order-card:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
+}
+
+.order-card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.order-card-name {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: var(--dark-brown);
+	margin: 0;
+}
+
+.order-card-cost {
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: var(--wood-primary);
+}
+
+.order-card-meta {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 12px;
+	color: #666;
+	font-size: 0.9rem;
+}
+
+.order-card-date,
+.order-card-time {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.order-card-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+/* Table View (Desktop) */
+.order-table-container {
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.order-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.order-table thead {
+	background-color: var(--wood-primary);
+	color: white;
+}
+
+.order-table th {
+	padding: 16px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.order-table tbody tr {
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.order-table tbody tr:hover {
+	background-color: rgba(245, 245, 220, 0.5);
+}
+
+.order-table td {
+	padding: 16px;
+	color: var(--dark-brown);
+}
+
+.order-name {
+	font-weight: 600;
+	color: var(--dark-brown);
+}
+
+.order-cost {
+	font-weight: bold;
+	color: var(--wood-primary);
+	font-size: 1.1rem;
+}
+
+.order-actions {
+	display: flex;
+	gap: 8px;
+}
+
+/* Action Buttons */
+.order-action-btn {
+	padding: 8px 12px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.9rem;
+	transition: all 0.2s ease;
+	background-color: transparent;
+}
+
+.order-action-btn.edit {
+	color: var(--wood-primary);
+	border: 1px solid var(--wood-primary);
+}
+
+.order-action-btn.edit:hover {
+	background-color: var(--wood-primary);
+	color: white;
+}
+
+.order-action-btn.share {
+	color: var(--forest-green);
+	border: 1px solid var(--forest-green);
+}
+
+.order-action-btn.share:hover {
+	background-color: var(--forest-green);
+	color: white;
+}
+
+.order-action-btn.delete {
+	color: #dc3545;
+	border: 1px solid #dc3545;
+}
+
+.order-action-btn.delete:hover {
+	background-color: #dc3545;
+	color: white;
+}
+
+/* Mobile: Full-width buttons */
+@media (max-width: 767px) {
+	.order-card-actions .order-action-btn {
+		flex: 1;
+		justify-content: center;
+	}
+}
+
+/* Desktop: Icon-only buttons in table */
+@media (min-width: 768px) {
+	.order-actions .order-action-btn {
+		padding: 8px;
+		font-size: 0;
+	}
+
+	.order-actions .order-action-btn svg {
+		font-size: 1.1rem;
+	}
+}

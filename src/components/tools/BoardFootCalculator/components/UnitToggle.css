@@ -1,0 +1,30 @@
+.unit-toggle-container {
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	padding: 4px;
+	gap: 4px;
+}
+
+.unit-toggle-btn {
+	flex: 1;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	background-color: transparent;
+	color: var(--dark-brown);
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.unit-toggle-btn.active {
+	background-color: var(--wood-primary);
+	color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.unit-toggle-btn:hover:not(.active) {
+	background-color: rgba(139, 111, 71, 0.1);
+}
